@@ -1,0 +1,20 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <div class="main">
+        <div class="is-clear-fix top-row">
+            <span class="py-2 is-pulled-left" style="font-size:1.5rem;">Blazor &amp; Bulma Workbook</span>
+            <a class="py-4 is-pulled-right" 
+               href="https://www.udemy.com/course/bulma-responsive-web-design-and-development/" 
+               target="_blank">Udemy Course</a>
+        </div>
+
+        <div class="content px-4">
+            @Body
+        </div>
+    </div>
+</div>

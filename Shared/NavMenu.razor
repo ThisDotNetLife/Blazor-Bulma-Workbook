@@ -1,0 +1,30 @@
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <a href="https://bulma.io/made-with-bulma/" style="margin:10px 0px 0px -15px;">
+      <img src="/images/made-with-bulma/transparent-white-turquoise.png" alt="Made with Bulma" width="200" height="38" />
+    </a>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">Home</NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="counter">Counter</NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="fetchdata">Fetch data</NavLink>
+        </li>
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
